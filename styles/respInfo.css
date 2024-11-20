@@ -1,0 +1,17 @@
+.resp-info-box{
+    display: block;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    top: 8px;
+    right: 8px;
+    bottom: 8px;
+    position:fixed;
+    filter: drop-shadow(2px 3px 3px rgba(70, 155, 208, 0.186));
+    transition: all 250ms;
+    border-radius: 8px;
+}
+.resp-info-closed {
+    transform: translateX(100%);
+}
