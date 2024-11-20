@@ -1,0 +1,107 @@
+
+.typenormal{
+    background-color: #A8A77A;
+    padding: 4px;
+    border-radius: 4px;
+}
+.typefire {
+    background-color: #EE8130;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typewater {
+    background-color: #6390F0;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typeelectric {
+    background-color: #F7D02C;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typegrass {
+    background-color: #7AC74C;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typeice {
+    background-color: #96D9D6;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typefighting {
+    background-color: #C22E28;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typepoison {
+    background-color: #A33EA1;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typeground {
+    background-color: #E2BF65;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typeflying {
+    background-color: #A98FF3;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typepsychic {
+    background-color: #F95587;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typebug {
+    background-color: #A6B91A;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typerock {
+    background-color: #B6A136;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typeghost {
+    background-color: #735797;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typedragon {
+    background-color: #6F35FC;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typedark {
+    background-color: #705746;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typesteel {
+    background-color: #B7B7CE;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.typefairy {
+    background-color: #D685AD;
+    padding: 4px;
+    border-radius: 4px;
+}
