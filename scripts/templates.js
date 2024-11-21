@@ -23,7 +23,8 @@ function renderCard(indexPokemon) {
 function renderInfo(indexPokemon) {
 let infoRef = document.getElementById("resp-info");
 infoRef.innerHTML = 
-    `<img class="infoImg" src="${responseToJson.sprites.front_default}" alt="">
+    `<button class="closeInfo" onclick = "closeInfo()"> X </button>
+    <img class="infoImg" src="${responseToJson.sprites.front_default}" alt="">
         <p class="number">
             Nr ${indexPokemon}
         </p>
@@ -48,9 +49,8 @@ infoRef.innerHTML =
         </div>
         <div class="Abilities">
             <h3>Abilities</h3>
-            <div class="allAbilities">
-                <p class="abilities singleInfoBox">${responseToJson.abilities[0].ability.name}</p>
-                <p class="abilities singleInfoBox">${responseToJson.abilities[1].ability.name}</p>
+            <div class="allAbilities" id="allAbilities${indexPokemon}">
+                
             </div>
         </div>
         <h3>Stats</h3>
@@ -87,5 +87,8 @@ infoRef.innerHTML =
             <img src="${responseToJson.sprites.back_shiny}" alt="">
         </div>`
 
-    
+        for (let indexType = 0; indexType < responseToJson.abilities.length; indexType++) {
+            let typesRef = document.getElementById("allAbilities" + indexPokemon)
+            typesRef.innerHTML += `<p class="abilities singleInfoBox">${responseToJson.abilities[indexType].ability.name}</p>`
+        }
 }

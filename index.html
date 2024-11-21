@@ -9,19 +9,26 @@
     <script src="./scripts/templates.js"></script>
     <script src="./scripts/info.js"></script>
     <script src="./scripts/searchPokemon.js"></script>
+    <script src="./scripts/pokeCount.js"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/classes.css">
     <link rel="stylesheet" href="./styles/cards.css">
     <link rel="stylesheet" href="./styles/respInfo.css">
     <link rel="stylesheet" href="./styles/info.css">
     <link rel="stylesheet" href="./styles/search.css">
+    <link rel="stylesheet" href="./styles/media.css">
 </head>
 
-<body onload="init()">
+<body onload="init()" id="body">
+    <div class="count">
+        <input class="numberInput" id="numberInput" type="number" placeholder="Number of Pokemon">
+        <button class="numberButton" onclick="setPokeCount()"><img src="./img/search-6699087_1280.png" alt=""></button>
+    </div>
     <div id="content" class="widthContentFull">
         <div class="searchBarDiv">
-<input class="searchBar" id="searchBar" type="text" placeholder="Search your Pokemon" >
-<button class="searchButton" onclick="searchPokemon()"><img src="./img/search-6699087_1280.png" alt=""></button>
+            <input class="searchBar" id="searchBar" type="text" minlength="3" placeholder="Search your Pokemon">
+            <button class="searchButton" onclick="searchPokemon()"><img src="./img/search-6699087_1280.png"
+                    alt=""></button>
 
 
         </div>
@@ -29,11 +36,8 @@
     </div>
     <div id="resp-info" class="resp-info-box resp-info-closed">
 
-        
+
     </div>
-<button onclick="playSound1()" id="playSound1"> Play Sound</button>
-
-
 
 </body>
 

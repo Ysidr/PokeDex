@@ -1,21 +1,12 @@
 let search = "";
 let currentPokeName = "";
 const BASE_URL = "https://pokeapi.co/api/v2/pokemon/";
+let pokemonCount = 100;
 
 
 
 function init() {
-    loadData();
-}
-
-async function loadData() {
-    document.getElementById("cards").innerHTML = "";
-    if (search.length >= 3) {
-        loadSpecificData()
-    }else{
-        loadAllData()
-    }
-    
+    loadAllData();
 }
 
 function stopBubbling(event) {
@@ -23,7 +14,8 @@ function stopBubbling(event) {
 }
 
 async function loadSpecificData() {
-    for (let indexPokemon = 1; indexPokemon < 101; indexPokemon++) {
+    document.getElementById("cards").innerHTML = "";
+    for (let indexPokemon = 1; indexPokemon < Number(pokemonCount)+1; indexPokemon++) {
         let response = await fetch(BASE_URL + indexPokemon);
         responseToJson = await response.json();
         currentPokeName = responseToJson.name
@@ -34,7 +26,8 @@ async function loadSpecificData() {
 }
 
 async function loadAllData() {
-    for (let indexPokemon = 1; indexPokemon < 101; indexPokemon++) {
+    document.getElementById("cards").innerHTML = "";
+    for (let indexPokemon = 1; indexPokemon < Number(pokemonCount)+1; indexPokemon++) {
         let response = await fetch(BASE_URL + indexPokemon);
         responseToJson = await response.json();
 

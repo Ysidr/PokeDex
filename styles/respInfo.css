@@ -12,6 +12,7 @@
     filter: drop-shadow(2px 3px 3px rgba(70, 155, 208, 0.186));
     transition: all 250ms;
     border-radius: 8px;
+    overflow-y: scroll;
 }
 .resp-info-closed {
     transform: translateX(100%);

@@ -29,3 +29,55 @@ button:hover {
 p {
     margin: 8px;
 }
+.closeInfo {
+    position: fixed;
+    top: 10px;
+    right: 340px;
+    width: 30px;
+    height: 30px;
+    background-color: #f05d6a;
+    filter: drop-shadow(2px 3px 3px #f05d699b);
+}
+.closeInfo:hover {
+    background-color: #e83847;
+    filter: drop-shadow(3px 4px 4px #f15461);
+}
+
+.numberButton {
+    height: 25px;
+    width: 25px;
+    margin-right: 20px;
+    background-color: #f05d6a;
+    filter: drop-shadow(2px 3px 3px #f05d699b);
+}
+
+.numberButton:hover {
+    background-color: #e83847;
+    filter: drop-shadow(3px 4px 4px #f15461);
+}
+
+.numberButton img {
+    height: 15px;
+}
+.numberInput {
+    margin-left: 10px;
+    height: 50px;
+    border: none;
+    display: flex;
+    flex: 1;
+    border-radius: 24px;
+    width: 150px;
+}
+.count {
+    margin: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 100ms;
+    filter: drop-shadow(2px 3px 3px rgba(70, 155, 208, 0.186));
+    height: 60px;
+    background-color: white;
+    border-radius: 24px;
+    gap: 2px;
+    width: 170px;
+}

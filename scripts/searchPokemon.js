@@ -1,6 +1,11 @@
 function searchPokemon() {
     search = document.getElementById("searchBar").value
     console.log(search.length);
-    loadData()
+    if (search.length >= 3) {
+        loadSpecificData()
+    } else {
+        loadAllData()
+        dispError()
+    }
     
 }

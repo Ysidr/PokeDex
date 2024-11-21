@@ -1,0 +1,20 @@
+@media (max-width: 800px) {
+    .mediaBodySmall{
+        overflow-y: hidden;
+    }
+    .resp-info-box{
+        width: 100%;
+        top: 0;
+        bottom: 0;
+    }
+    .closeInfo{
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 364px) {
+    .evolutions img{
+        width: 150px;
+    }
+}
