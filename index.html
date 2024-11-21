@@ -7,18 +7,33 @@
     <title>PokeDex</title>
     <script src="./script.js"></script>
     <script src="./stripts/templates.js"></script>
+    <script src="./stripts/info.js"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/classes.css">
     <link rel="stylesheet" href="./styles/cards.css">
     <link rel="stylesheet" href="./styles/respInfo.css">
+    <link rel="stylesheet" href="./styles/info.css">
+    <link rel="stylesheet" href="./styles/search.css">
 </head>
 
 <body onload="init()">
     <div id="content" class="widthContentFull">
-        <div class="searchBar"></div>
-        <section id="cards" class="cards"></section>
+        <div class="searchBarDiv">
+<input class="searchBar" id="searchBar" type="text" placeholder="   Search your Pokemon" >
+<button class="searchButton" onclick="searchPokemon()"><img src="./img/search-6699087_1280.png" alt=""></button>
+
+
+        </div>
+        <section onclick="closeInfo()" id="cards" class="cards"></section>
     </div>
-    <div id="resp-info" class="resp-info-box resp-info-closed"></div>
+    <div id="resp-info" class="resp-info-box resp-info-closed">
+
+        
+    </div>
+<button onclick="playSound1()" id="playSound1"> Play Sound</button>
+
+
+
 </body>
 
 </html>

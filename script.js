@@ -14,10 +14,8 @@ async function loadData() {
     }
 }
 
-function openInfo(indexPokemon) {
-    document.getElementById('resp-info').classList.toggle('resp-info-closed');
-    document.getElementById("content").classList.toggle("widthContentSmall");
-    getInfo(indexPokemon)
+function stopBubbling(event) {
+    event.stopPropagation();
 }
 
 

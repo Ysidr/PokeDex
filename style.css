@@ -14,3 +14,18 @@ body {
 .widthContentSmall {
     width: calc(100% - 400px);
 }
+button {
+    border: none;
+    width: 100px;
+    background-color: #f7f7fa;
+    border-radius: 8px;
+    padding: 4px 0 4px 0;
+}
+button:hover {
+    background-color: #eaeaec;
+    transition: 200ms;
+    filter: drop-shadow(2px 4px 4px rgba(70, 155, 208, 0.186));
+}
+p {
+    margin: 8px;
+}

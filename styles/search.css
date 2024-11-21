@@ -1,0 +1,35 @@
+.searchBarDiv {
+    margin: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 100ms;
+    filter: drop-shadow(2px 3px 3px rgba(70, 155, 208, 0.186));
+    height: 60px;
+    background-color: white;
+    border-radius: 24px;
+    gap: 2px;
+}
+
+.searchButton {
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+    background-color: #f05d6a;
+    filter: drop-shadow(2px 3px 3px #f05d699b);
+}
+.searchButton:hover {
+    background-color: #e83847;
+    filter: drop-shadow(3px 4px 4px #f15461);
+}
+.searchButton img {
+    height: 30px;
+}
+
+.searchBar {
+display: flex;
+flex: 1;
+height: 50px;
+border: none;
+border-radius: 24px;
+}

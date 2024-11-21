@@ -3,9 +3,10 @@
     background-color: white;
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 380px;
     top: 8px;
-    right: 8px;
+    right: 0;
     bottom: 8px;
     position:fixed;
     filter: drop-shadow(2px 3px 3px rgba(70, 155, 208, 0.186));

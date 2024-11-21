@@ -1,0 +1,120 @@
+.number {
+    margin: 0;
+}
+
+.infoImg {
+    width: 150px;
+}
+
+.singleInfoBox {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    background-color: #f7f7fa;
+    border-radius: 8px;
+    padding: 4px 0 4px 0;
+
+}
+
+.sounds {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.sizePokemon {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.height {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.weight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Abilities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.allAbilities {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats {
+    background-color: #f7f7fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    width: 50px;
+    height: 90px;
+}
+
+.stat1 {
+    background-color: #cc3b47;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+.stat2 {
+    background-color: #f79e54;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+.stat3 {
+    background-color: #e8cd5f;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+.stat4 {
+    background-color: #9ddafa;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+.stat5 {
+    background-color: #a7d998;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+.stat6 {
+    background-color: #eb9ba8;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+
+.allStats {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.evolutions img{
+ width: 180px;
+}
+
+.shinyImgh3{
+    margin-bottom: 0;
+}
