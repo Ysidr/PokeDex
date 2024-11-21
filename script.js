@@ -34,3 +34,11 @@ async function loadAllData() {
         renderCard(indexPokemon);
     }
 }
+
+function dispError() {
+    document.getElementById("warning").classList.remove("d-none");
+}
+function removeError() {
+    document.getElementById("warning").classList.add("d-none");
+
+}

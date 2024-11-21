@@ -17,21 +17,22 @@
     <link rel="stylesheet" href="./styles/info.css">
     <link rel="stylesheet" href="./styles/search.css">
     <link rel="stylesheet" href="./styles/media.css">
+    <link rel="stylesheet" href="./styles/buttonsEct.css">
 </head>
 
 <body onload="init()" id="body">
     <div class="count">
-        <input class="numberInput" id="numberInput" type="number" placeholder="Number of Pokemon">
+        <input class="numberInput" max="1000" min="1" id="numberInput" type="number" placeholder="Number of Pokemon">
         <button class="numberButton" onclick="setPokeCount()"><img src="./img/search-6699087_1280.png" alt=""></button>
     </div>
     <div id="content" class="widthContentFull">
         <div class="searchBarDiv">
             <input class="searchBar" id="searchBar" type="text" minlength="3" placeholder="Search your Pokemon">
             <button class="searchButton" onclick="searchPokemon()"><img src="./img/search-6699087_1280.png"
-                    alt=""></button>
-
+                 alt=""></button>
 
         </div>
+        <p class="warning d-none" id="warning">Überprüfe deine Eingaben</p>
         <section onclick="closeInfo()" id="cards" class="cards"></section>
     </div>
     <div id="resp-info" class="resp-info-box resp-info-closed">
