@@ -36,15 +36,12 @@ function stopBubbling(event) {
 }
 
 async function loadSpecificData() {
-    for (let indexPokemon = latestPokemon; indexPokemon < Number(pokemonCount) + 1; indexPokemon++) {
-        let response = await fetch(BASE_URL + indexPokemon);
-        responseToJson = await response.json();
-        currentPokeName = responseToJson.name
-        if (currentPokeName.includes(search)) {
-            renderCard(indexPokemon);
-        }
-    }
-    latestPokemon = Number(pokemonCount)
+    document.getElementById("cards").classList.add("d-none");
+    loading();
+    await getPokemonByName();
+    latestPokemon = Number(pokemonCount);
+    loading();
+    document.getElementById("cards").classList.remove("d-none");
 }
 
 async function loadAllData() {
@@ -74,5 +71,15 @@ function dispError() {
 }
 function removeError() {
     document.getElementById("warning").classList.add("d-none");
+}
 
+async function getPokemonByName() {
+    for (let indexPokemon = latestPokemon; indexPokemon < Number(pokemonCount) + 1; indexPokemon++) {
+        let response = await fetch(BASE_URL + indexPokemon);
+        responseToJson = await response.json();
+        currentPokeName = responseToJson.name
+        if (currentPokeName.includes(search)) {
+            renderCard(indexPokemon);
+        }
+    }
 }

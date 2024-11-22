@@ -13,7 +13,8 @@ function renderCard(indexPokemon) {
                                    
                                 </div>
                                 </div>
-                            </div>`
+                            </div>
+                            `
     for (let indexType = 0; indexType < responseToJson.types.length; indexType++) {
         let typesRef = document.getElementById("types" + indexPokemon)
         typesRef.innerHTML += `<p class="type${responseToJson.types[indexType].type.name}">${responseToJson.types[indexType].type.name}</p>`
