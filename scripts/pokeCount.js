@@ -1,4 +1,6 @@
 function setPokeCount(){
+    clearMain();
+    latestPokemon = 1;
     pokemonCount = document.getElementById("numberInput").value;
     if (pokemonCount == "") {
         pokemonCount = 20;

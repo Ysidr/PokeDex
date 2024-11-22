@@ -2,10 +2,14 @@ let search = "";
 let currentPokeName = "";
 const BASE_URL = "https://pokeapi.co/api/v2/pokemon/";
 let pokemonCount = 20;
+let latestPokemon = 1;
 
-
+function clearMain() {
+    document.getElementById("cards").innerHTML = "";
+}
 
 function init() {
+    clearMain()
     loadAndShowAllPokemon();
 }
 
@@ -19,10 +23,11 @@ async function loadAndShowAllPokemon() {
 
 }
 async function loadAndShowSelectedPokemon() {
-    console.log("loading");
-
+    document.getElementById("cards").classList.add("d-none");
+    loading();
     await loadSpecificData()
-    console.log("done");
+    loading();
+    document.getElementById("cards").classList.remove("d-none");
 
 }
 
@@ -31,8 +36,7 @@ function stopBubbling(event) {
 }
 
 async function loadSpecificData() {
-    document.getElementById("cards").innerHTML = "";
-    for (let indexPokemon = 1; indexPokemon < Number(pokemonCount) + 1; indexPokemon++) {
+    for (let indexPokemon = latestPokemon; indexPokemon < Number(pokemonCount) + 1; indexPokemon++) {
         let response = await fetch(BASE_URL + indexPokemon);
         responseToJson = await response.json();
         currentPokeName = responseToJson.name
@@ -40,16 +44,27 @@ async function loadSpecificData() {
             renderCard(indexPokemon);
         }
     }
+    latestPokemon = Number(pokemonCount)
 }
 
 async function loadAllData() {
-    document.getElementById("cards").innerHTML = "";
-    for (let indexPokemon = 1; indexPokemon < Number(pokemonCount) + 1; indexPokemon++) {
+    for (let indexPokemon = latestPokemon; indexPokemon < Number(pokemonCount) + 1; indexPokemon++) {
         let response = await fetch(BASE_URL + indexPokemon);
         responseToJson = await response.json();
 
         renderCard(indexPokemon);
     }
+    latestPokemon = Number(pokemonCount)
+}
+
+async function addData() {
+    for (let indexPokemon = latestPokemon +1; indexPokemon < Number(pokemonCount) + 1; indexPokemon++) {
+        let response = await fetch(BASE_URL + indexPokemon);
+        responseToJson = await response.json();
+
+        renderCard(indexPokemon);
+    }
+    latestPokemon = Number(pokemonCount)
 }
 
 function dispError() {
