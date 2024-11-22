@@ -21,9 +21,9 @@ function renderCard(indexPokemon) {
 }
 
 function renderInfo(indexPokemon) {
-let infoRef = document.getElementById("resp-info");
-infoRef.innerHTML = 
-    `<button class="closeInfo" onclick = "closeInfo()"> X </button>
+    let infoRef = document.getElementById("resp-info");
+    infoRef.innerHTML =
+        `<button class="closeInfo" onclick = "closeInfo()"> X </button>
     <img class="infoImg" src="${responseToJson.sprites.front_default}" alt="">
         <p class="number">
             Nr ${indexPokemon}
@@ -87,8 +87,17 @@ infoRef.innerHTML =
             <img src="${responseToJson.sprites.back_shiny}" alt="">
         </div>`
 
-        for (let indexType = 0; indexType < responseToJson.abilities.length; indexType++) {
-            let typesRef = document.getElementById("allAbilities" + indexPokemon)
-            typesRef.innerHTML += `<p class="abilities singleInfoBox">${responseToJson.abilities[indexType].ability.name}</p>`
-        }
+    for (let indexType = 0; indexType < responseToJson.abilities.length; indexType++) {
+        let typesRef = document.getElementById("allAbilities" + indexPokemon)
+        typesRef.innerHTML += `<p class="abilities singleInfoBox">${responseToJson.abilities[indexType].ability.name}</p>`
+    }
+}
+function renderLoadingSpinner() {
+    document.getElementById("loadingSpinner").innerHTML = innerHTML =
+    `
+    <div class="led-circle-container">
+        <div class="led-circle"></div>
+        <div class="led-text">Loading</div>
+    </div>
+    `;
 }

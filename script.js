@@ -1,12 +1,29 @@
 let search = "";
 let currentPokeName = "";
 const BASE_URL = "https://pokeapi.co/api/v2/pokemon/";
-let pokemonCount = 100;
+let pokemonCount = 20;
 
 
 
 function init() {
-    loadAllData();
+    loadAndShowAllPokemon();
+}
+
+async function loadAndShowAllPokemon() {
+    document.getElementById("cards").classList.add("d-none");
+    loading();
+    await loadAllData()
+    loading();
+    document.getElementById("cards").classList.remove("d-none");
+
+
+}
+async function loadAndShowSelectedPokemon() {
+    console.log("loading");
+
+    await loadSpecificData()
+    console.log("done");
+
 }
 
 function stopBubbling(event) {
@@ -15,7 +32,7 @@ function stopBubbling(event) {
 
 async function loadSpecificData() {
     document.getElementById("cards").innerHTML = "";
-    for (let indexPokemon = 1; indexPokemon < Number(pokemonCount)+1; indexPokemon++) {
+    for (let indexPokemon = 1; indexPokemon < Number(pokemonCount) + 1; indexPokemon++) {
         let response = await fetch(BASE_URL + indexPokemon);
         responseToJson = await response.json();
         currentPokeName = responseToJson.name
@@ -27,7 +44,7 @@ async function loadSpecificData() {
 
 async function loadAllData() {
     document.getElementById("cards").innerHTML = "";
-    for (let indexPokemon = 1; indexPokemon < Number(pokemonCount)+1; indexPokemon++) {
+    for (let indexPokemon = 1; indexPokemon < Number(pokemonCount) + 1; indexPokemon++) {
         let response = await fetch(BASE_URL + indexPokemon);
         responseToJson = await response.json();
 

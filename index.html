@@ -10,6 +10,7 @@
     <script src="./scripts/info.js"></script>
     <script src="./scripts/searchPokemon.js"></script>
     <script src="./scripts/pokeCount.js"></script>
+    <script src="./scripts/loading.js"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/classes.css">
     <link rel="stylesheet" href="./styles/cards.css">
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="./styles/search.css">
     <link rel="stylesheet" href="./styles/media.css">
     <link rel="stylesheet" href="./styles/buttonsEct.css">
+    <link rel="stylesheet" href="./styles/loading.css">
 </head>
 
 <body onload="init()" id="body">
@@ -29,11 +31,12 @@
         <div class="searchBarDiv">
             <input class="searchBar" id="searchBar" type="text" minlength="3" placeholder="Search your Pokemon">
             <button class="searchButton" onclick="searchPokemon()"><img src="./img/search-6699087_1280.png"
-                 alt=""></button>
+                    alt=""></button>
 
         </div>
         <p class="warning d-none" id="warning">Überprüfe deine Eingaben</p>
         <section onclick="closeInfo()" id="cards" class="cards"></section>
+        <section id="loadingSpinner" class="loadingSpinner d-none"></section>
     </div>
     <div id="resp-info" class="resp-info-box resp-info-closed">
 
