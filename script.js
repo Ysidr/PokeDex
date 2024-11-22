@@ -58,6 +58,7 @@ async function loadAllData() {
 }
 
 async function addData() {
+    loading();
     for (let indexPokemon = latestPokemon +1; indexPokemon < Number(pokemonCount) + 1; indexPokemon++) {
         let response = await fetch(BASE_URL + indexPokemon);
         responseToJson = await response.json();
@@ -65,6 +66,7 @@ async function addData() {
         renderCard(indexPokemon);
     }
     latestPokemon = Number(pokemonCount)
+    loading();
 }
 
 function dispError() {

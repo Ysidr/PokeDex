@@ -11,23 +11,6 @@
     gap: 2px;
 }
 
-.searchButton {
-    height: 40px;
-    width: 40px;
-    margin-right: 20px;
-    background-color: #f05d6a;
-    filter: drop-shadow(2px 3px 3px #f05d699b);
-}
-
-.searchButton:hover {
-    background-color: #e83847;
-    filter: drop-shadow(3px 4px 4px #f15461);
-}
-
-.searchButton img {
-    height: 30px;
-}
-
 .searchBar {
     margin-left: 10px;
     display: flex;
