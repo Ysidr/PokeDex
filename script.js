@@ -36,6 +36,7 @@ function stopBubbling(event) {
 }
 
 async function loadSpecificData() {
+    removeError()
     document.getElementById("cards").classList.add("d-none");
     loading();
     await getPokemonByName();
@@ -45,6 +46,7 @@ async function loadSpecificData() {
 }
 
 async function loadAllData() {
+    removeError()
     for (let indexPokemon = latestPokemon; indexPokemon < Number(pokemonCount) + 1; indexPokemon++) {
         let response = await fetch(BASE_URL + indexPokemon);
         responseToJson = await response.json();
@@ -55,6 +57,7 @@ async function loadAllData() {
 }
 
 async function addData() {
+    removeError()
     loading();
     for (let indexPokemon = latestPokemon +1; indexPokemon < Number(pokemonCount) + 1; indexPokemon++) {
         let response = await fetch(BASE_URL + indexPokemon);

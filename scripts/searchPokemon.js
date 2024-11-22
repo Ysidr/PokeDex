@@ -1,4 +1,5 @@
 function searchPokemon() {
+    removeError()
     latestPokemon = 1;
     clearMain()
     search = document.getElementById("searchBar").value
