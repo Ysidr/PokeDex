@@ -12,5 +12,6 @@ function searchPokemon() {
     }else {
         loadAllData()
         dispError()
-    }  
+    } 
+     rendertPokemon = 0;
 }

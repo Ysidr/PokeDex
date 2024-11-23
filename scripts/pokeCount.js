@@ -6,6 +6,7 @@ function setPokeCount(){
     pokemonCount = Number(document.getElementById("numberInput").value);
     isCorrectParameters();
     isPokeCount == false;
+    rendertPokemon = 0;
 }
 
 function showAmountOfPokemon() {
