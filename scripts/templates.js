@@ -25,14 +25,18 @@ function renderInfo(indexPokemon) {
     let infoRef = document.getElementById("resp-info");
     infoRef.innerHTML =
         `<button class="closeInfo" onclick = "closeInfo()"> X </button>
+        <div class= "top">
+        <button class="InfoSwitch" onclick="previous(${indexPokemon})" id="previous"><- previous</button>
     <img class="infoImg" src="${responseToJson.sprites.front_default}" alt="">
+    <button class="InfoSwitch" onclick="next(${indexPokemon})" id="next"> next -></button> 
+    </div>
         <p class="number">
             Nr ${indexPokemon}
         </p>
         <div class="types" id="types${indexPokemon}">
 
         </div>
-        <h3>Sounds</h3>
+        <h1>${responseToJson.name}</h1>
         <div class="sounds">
         <button onclick="playSound1()" id="playSound1"> Play Sound</button>
         <button onclick="playSound2()" id="playSound2"> Play Sound</button>
@@ -50,7 +54,7 @@ function renderInfo(indexPokemon) {
         </div>
         <div class="Abilities">
             <h3>Abilities</h3>
-            <div class="allAbilities" id="allAbilities${indexPokemon}">
+           <div class="allAbilities" id="allAbilities${indexPokemon}">
                 
             </div>
         </div>

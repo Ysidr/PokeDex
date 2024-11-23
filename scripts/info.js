@@ -17,3 +17,20 @@ async function getInfo(indexPokemon) {
     responseToJson = await response.json();
     renderInfo(indexPokemon)  
 }
+
+function previous(indexPokemon) {
+    indexPokemon --;
+    if (indexPokemon >=1 && indexPokemon <= pokemonCount) {
+        openInfo (indexPokemon)
+    }else{
+        indexPokemon ++;
+    }
+}
+function next(indexPokemon) {
+    indexPokemon ++;
+    if (indexPokemon >=1 && indexPokemon <= pokemonCount) {
+        openInfo (indexPokemon)
+    }else{
+        indexPokemon --;
+    }
+}
