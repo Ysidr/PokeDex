@@ -3,9 +3,9 @@
     pokemonCount = Number(pokemonCount) + 20;
     document.getElementById("cards").classList.add("d-none");
     document.getElementById("loadMore").classList.add("d-none");
-    loading()
+    
      await addAndCheck()
-    loading()
+
     document.getElementById("cards").classList.remove("d-none");
     document.getElementById("loadMore").classList.remove("d-none");
 }

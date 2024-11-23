@@ -95,10 +95,10 @@ function renderInfo(indexPokemon) {
 }
 function renderLoadingSpinner() {
     document.getElementById("loadingSpinner").innerHTML = innerHTML =
-    `
-    <div class="led-circle-container">
-        <div class="led-circle"></div>
-        <div class="led-text">Loading</div>
-    </div>
+        `
+                    <div class="led-circle-container">
+                        <div class="led-circle"></div>
+                        <div class="led-text" id="loadingText"></div>
+                    </div>
     `;
 }
